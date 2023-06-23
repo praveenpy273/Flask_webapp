@@ -1,5 +1,4 @@
 from flask import Flask
-from vsearch
 
 app = Flask(__name__)
 
