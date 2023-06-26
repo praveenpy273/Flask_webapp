@@ -8,7 +8,7 @@ def hello():
 
 
 @app.route('/search4')
-def search4letters(phrase ='life,the universe,and everything', letters = 'eiru!') -> set:
+def do_search(phrase ='life,the universe,and everything', letters = 'eiru!'):
     """Return the letters which are common with phrase"""
     return str(set(letters).intersection(set(phrase)))
 
