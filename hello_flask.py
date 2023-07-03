@@ -7,8 +7,8 @@ def hello():
     return 'Hello from Flask'
 
 
-@app.route('/search4/')
-def search4letters(phrase ='life,the universe,and everything', letters = 'eiru!') -> set:
+@app.route('/search4',methods=['POST'])
+def search4letters(phrase ='life,the universe,and everything', letters = 'eiru,!') -> set:
     """Return the letters which are common with phrase"""
     return str(set(letters).intersection(set(phrase)))
 
@@ -17,4 +17,4 @@ def entry_page():
     return render_template('entry.html', the_title = 'Welcome to search4letters on the web!')
 
 
-app.run()
+app.run(debug = True)
