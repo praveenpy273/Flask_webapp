@@ -7,10 +7,12 @@ app = Flask(__name__)
 
 
 
+
 @app.route('/search4',methods=['POST'])
 def do_search() -> str: 
     phrase = request.form['phrase']
     letters = request.form['letters']
+
     """Return the letters which are common with phrase"""
     title = 'Here are your results:'
     results = str(search4letters(phrase, letters))
