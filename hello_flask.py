@@ -1,8 +1,11 @@
 from flask import Flask, render_template, request
 from vsearch import search4letters
+import sys
+
 
 '''__name__ when used anywhere in the code it dentoes currently active module
 Flask class needs to know the name of currently active module'''
+
 app = Flask(__name__)
 
 
